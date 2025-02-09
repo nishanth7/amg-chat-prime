@@ -9,11 +9,12 @@ import {Carousel} from 'primeng/carousel';
 import {Tag} from 'primeng/tag';
 import {Product} from './product';
 import {ProductService} from './products.service';
+import {Popover} from 'primeng/popover';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, InputTextModule, ButtonModule, MessageModule, FormsModule, Carousel, Tag],
+  imports: [CommonModule, RouterOutlet, InputTextModule, ButtonModule, MessageModule, FormsModule, Carousel, Tag, Popover],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   providers:  [ ProductService ]
