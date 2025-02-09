@@ -140,7 +140,11 @@
 	<!-- Component End  -->
 <!--
 </div> -->
-<p-button (click)="op.toggle($event)" icon="pi pi-share-alt" label="Chat" />
+<!--<p-button  styleClass="chatButton" (click)="op.toggle($event)" icon="pi pi-share-alt" label="Chat" />-->
+<button (click)="op.toggle($event)" class="chatButton" pButton pRipple severity="success">
+<!--  <WindowMaximizeIcon pButtonIcon />-->
+  <span pButtonLabel>Chat</span>
+</button>
 <p-popover #op>
 
 <div class="w-full max-w-md bg-gray-100 dark:bg-gray-800 rounded-2xl neo-shadow p-6 space-y-6">
