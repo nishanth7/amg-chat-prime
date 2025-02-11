@@ -141,84 +141,240 @@
 <!--
 </div> -->
 <!--<p-button  styleClass="chatButton" (click)="op.toggle($event)" icon="pi pi-share-alt" label="Chat" />-->
-<button (click)="op.toggle($event)" class="chatButton" pButton pRipple severity="success">
-<!--  <WindowMaximizeIcon pButtonIcon />-->
-  <span pButtonLabel>Chat</span>
-</button>
-<p-popover #op>
+<!--<button (click)="op.toggle($event)" class="chatButton" pButton pRipple severity="success">-->
+<!--&lt;!&ndash;  <WindowMaximizeIcon pButtonIcon />&ndash;&gt;-->
+<!--  <span pButtonLabel>Chat</span>-->
+<!--</button>-->
+<!--<p-popover #op>-->
 
-<div class="w-full max-w-md bg-gray-100 dark:bg-gray-800 rounded-2xl neo-shadow p-6 space-y-6">
-  <!-- Chat header -->
-  <div class="flex items-center space-x-4">
-<!--      <div class="w-12 h-12 rounded-full neo-shadow flex items-center justify-center">-->
-<!--          <span class="text-xl font-semibold text-gray-700 dark:text-gray-300">AMG</span>-->
+<!--<div class="w-full max-w-md bg-gray-100 dark:bg-gray-800 rounded-2xl neo-shadow p-6 space-y-6">-->
+<!--  &lt;!&ndash; Chat header &ndash;&gt;-->
+<!--  <div class="flex items-center space-x-4">-->
+<!--&lt;!&ndash;      <div class="w-12 h-12 rounded-full neo-shadow flex items-center justify-center">&ndash;&gt;-->
+<!--&lt;!&ndash;          <span class="text-xl font-semibold text-gray-700 dark:text-gray-300">AMG</span>&ndash;&gt;-->
+<!--&lt;!&ndash;      </div>&ndash;&gt;-->
+<!--      <h1 class="text-2xl font-bold text-gray-800 dark:text-gray-200">AMG AI Agent</h1>-->
+<!--  </div>-->
+
+<!--  &lt;!&ndash; Chat messages area &ndash;&gt;-->
+<!--  <div class="h-96 overflow-y-auto neo-inset p-4 rounded-xl space-y-4">-->
+<!--      &lt;!&ndash; Received message &ndash;&gt;-->
+<!--      <div class="flex items-start space-x-2">-->
+<!--&lt;!&ndash;          <div class="w-8 h-8 rounded-full neo-shadow flex-shrink-0 flex items-center justify-center">&ndash;&gt;-->
+<!--&lt;!&ndash;              <span class="text-sm font-medium text-gray-700 dark:text-gray-300">AMG</span>&ndash;&gt;-->
+<!--&lt;!&ndash;          </div>&ndash;&gt;-->
+<!--          <div class="bg-white dark:bg-gray-700 p-3 rounded-lg neo-shadow max-w-xs">-->
+<!--              <p class="text-sm text-gray-700 dark:text-gray-300">Welcome to AMG Transform</p>-->
+<!--          </div>-->
 <!--      </div>-->
-      <h1 class="text-2xl font-bold text-gray-800 dark:text-gray-200">AMG AI Agent</h1>
-  </div>
-
-  <!-- Chat messages area -->
-  <div class="h-96 overflow-y-auto neo-inset p-4 rounded-xl space-y-4">
-      <!-- Received message -->
-      <div class="flex items-start space-x-2">
-<!--          <div class="w-8 h-8 rounded-full neo-shadow flex-shrink-0 flex items-center justify-center">-->
-<!--              <span class="text-sm font-medium text-gray-700 dark:text-gray-300">AMG</span>-->
-<!--          </div>-->
-          <div class="bg-white dark:bg-gray-700 p-3 rounded-lg neo-shadow max-w-xs">
-              <p class="text-sm text-gray-700 dark:text-gray-300">Welcome to AMG Transform</p>
-          </div>
-      </div>
-      <div class="flex items-start space-x-2">
-<!--        <div class="w-8 h-8 rounded-full neo-shadow flex-shrink-0 flex items-center justify-center">-->
-<!--            <span class="text-sm font-medium text-gray-700 dark:text-gray-300">AMG</span>-->
+<!--      <div class="flex items-start space-x-2">-->
+<!--&lt;!&ndash;        <div class="w-8 h-8 rounded-full neo-shadow flex-shrink-0 flex items-center justify-center">&ndash;&gt;-->
+<!--&lt;!&ndash;            <span class="text-sm font-medium text-gray-700 dark:text-gray-300">AMG</span>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--        <div class="bg-white dark:bg-gray-700 p-3 rounded-lg neo-shadow max-w-xs">-->
+<!--            <p class="text-sm text-gray-700 dark:text-gray-300">Experience the Precision and Results of a True Marketing Maestro!</p>-->
 <!--        </div>-->
-        <div class="bg-white dark:bg-gray-700 p-3 rounded-lg neo-shadow max-w-xs">
-            <p class="text-sm text-gray-700 dark:text-gray-300">Experience the Precision and Results of a True Marketing Maestro!</p>
-        </div>
-      </div>
+<!--      </div>-->
 
-    <p-carousel [value]="products" [numVisible]="1" [numScroll]="1" [responsiveOptions]="responsiveOptions">
+<!--    <p-carousel [value]="products" [numVisible]="1" [numScroll]="1" [responsiveOptions]="responsiveOptions">-->
 
-      <ng-template let-product #item>
-        <div  class="border border-surface-200 dark:border-surface-700 rounded m-2 p-4">
-          <div class="mb-4">
-            <div class="relative mx-auto">
-              <img  src="{{ product.image }}" [alt]="product.name" class="w-full rounded-border" />
-<!--              <p-tag [value]="product.inventoryStatus" [severity]="getSeverity(product.inventoryStatus)" class="absolute" styleClass="dark:!bg-surface-900" [ngStyle]="{ 'left.px': 5, 'top.px': 5 }" />-->
-            </div>
-          </div>
-          <div class="mb-4 text-sm">{{ product.name }}</div>
-          <div class="mb-4 text-xs">{{ product.description }}</div>
-<!--          <div class="flex justify-between items-center">-->
-<!--            <div class="mt-0 font-semibold text-xl">{{ '$' + product.price }}</div>-->
-<!--            <span>-->
-<!--                    <p-button icon="pi pi-heart" severity="secondary" [outlined]="true" />-->
-<!--                    <p-button icon="pi pi-shopping-cart" styleClass="ml-2" />-->
-<!--                </span>-->
+<!--      <ng-template let-product #item>-->
+<!--        <div  class="border border-surface-200 dark:border-surface-700 rounded m-2 p-4">-->
+<!--          <div class="mb-4">-->
+<!--            <div class="relative mx-auto">-->
+<!--              <img  src="{{ product.image }}" [alt]="product.name" class="w-full rounded-border" />-->
+<!--&lt;!&ndash;              <p-tag [value]="product.inventoryStatus" [severity]="getSeverity(product.inventoryStatus)" class="absolute" styleClass="dark:!bg-surface-900" [ngStyle]="{ 'left.px': 5, 'top.px': 5 }" />&ndash;&gt;-->
+<!--            </div>-->
 <!--          </div>-->
-        </div>
-      </ng-template>
-    </p-carousel>
+<!--          <div class="mb-4 text-sm">{{ product.name }}</div>-->
+<!--          <div class="mb-4 text-xs">{{ product.description }}</div>-->
+<!--&lt;!&ndash;          <div class="flex justify-between items-center">&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="mt-0 font-semibold text-xl">{{ '$' + product.price }}</div>&ndash;&gt;-->
+<!--&lt;!&ndash;            <span>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <p-button icon="pi pi-heart" severity="secondary" [outlined]="true" />&ndash;&gt;-->
+<!--&lt;!&ndash;                    <p-button icon="pi pi-shopping-cart" styleClass="ml-2" />&ndash;&gt;-->
+<!--&lt;!&ndash;                </span>&ndash;&gt;-->
+<!--&lt;!&ndash;          </div>&ndash;&gt;-->
+<!--        </div>-->
+<!--      </ng-template>-->
+<!--    </p-carousel>-->
 
-      <!-- Sent message -->
-      <div class="flex items-start justify-end space-x-2">
-          <div class="bg-blue-500 p-3 rounded-lg neo-shadow max-w-xs">
-              <p class="text-sm text-white">Experience the Precision and Results of a True Marketing Maestro!</p>
-          </div>
-      </div>
-  </div>
+<!--      &lt;!&ndash; Sent message &ndash;&gt;-->
+<!--      <div class="flex items-start justify-end space-x-2">-->
+<!--          <div class="bg-blue-500 p-3 rounded-lg neo-shadow max-w-xs">-->
+<!--              <p class="text-sm text-white">Experience the Precision and Results of a True Marketing Maestro!</p>-->
+<!--          </div>-->
+<!--      </div>-->
+<!--  </div>-->
 
-  <!-- Message input area -->
-  <div class="flex items-center space-x-4">
-      <div class="flex-grow">
-          <input type="text" placeholder="Type your message..."
-                 class="w-full p-4 rounded-xl neo-inset bg-transparent text-gray-700 dark:text-gray-300 placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none">
+<!--  &lt;!&ndash; Message input area &ndash;&gt;-->
+<!--  <div class="flex items-center space-x-4">-->
+<!--      <div class="flex-grow">-->
+<!--          <input type="text" placeholder="Type your message..."-->
+<!--                 class="w-full p-4 rounded-xl neo-inset bg-transparent text-gray-700 dark:text-gray-300 placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none">-->
+<!--      </div>-->
+<!--      <button class="p-4 rounded-xl neo-shadow neo-button focus:outline-none">-->
+<!--          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">-->
+<!--              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />-->
+<!--          </svg>-->
+<!--      </button>-->
+<!--  </div>-->
+<!--</div>-->
+<!--</p-popover>-->
+<style>
+  .message-time {
+    font-size: 0.7rem;
+    margin-top: 0.3rem;
+  }
+
+  .chat-container {
+    background-image: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)),
+    url('https://res.cloudinary.com/djv4xa6wu/image/upload/v1735722165/AbhirajK/Abhirajk.webp');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+  .typing-indicator span {
+    animation: blink 1.5s infinite;
+    margin-right: 2px;
+  }
+
+  @keyframes blink {
+    0% { opacity: 0.2; }
+    20% { opacity: 1; }
+    100% { opacity: 0.2; }
+  }
+
+  .typing-indicator span:nth-child(2) { animation-delay: 0.2s; }
+  .typing-indicator span:nth-child(3) { animation-delay: 0.4s; }
+</style>
+<div class="bg-blue-600 text-white p-4  shadow-lg">
+  <div class="max-w-4xl mx-auto flex items-center justify-between">
+    <div class="flex items-center space-x-4">
+      <img src="https://res.cloudinary.com/djv4xa6wu/image/upload/v1735722165/AbhirajK/Abhirajk.webp"
+           alt="Profile"
+           class="w-10 h-10 rounded-full object-cover border-2 border-white">
+      <div>
+        <h1 class="font-bold">Abhiraj K</h1>
+        <a href="https://abhirajk.vercel.app"
+           target="_blank"
+           class="text-sm text-blue-100 hover:text-white transition">
+          Visit Portfolio →
+        </a>
       </div>
-      <button class="p-4 rounded-xl neo-shadow neo-button focus:outline-none">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-          </svg>
+    </div>
+    <div class="flex items-center space-x-4">
+      <button class="p-2 hover:bg-blue-700 rounded-full transition">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+        </svg>
       </button>
+      <button class="p-2 hover:bg-blue-700 rounded-full transition">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+        </svg>
+      </button>
+      <button class="p-2 hover:bg-blue-700 rounded-full transition">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"/>
+        </svg>
+      </button>
+    </div>
   </div>
 </div>
-</p-popover>
+
+<!-- Chat Messages -->
+<div class="flex-1 overflow-y-auto p-4 chat-container">
+  <div class="max-w-4xl mx-auto space-y-4">
+    <!-- Receiver Message -->
+    <div class="flex items-start space-x-2">
+      <img src="https://res.cloudinary.com/djv4xa6wu/image/upload/v1735722165/AbhirajK/Abhirajk.webp"
+           alt="Abhiraj"
+           class="w-8 h-8 rounded-full object-cover">
+      <div>
+        <div class="bg-white rounded-lg rounded-tl-none p-3 shadow-md max-w-md">
+          <p>Hi there! Welcome to my portfolio chat. Feel free to explore my work at
+            <a href="https://abhirajk.vercel.app"
+               target="_blank"
+               class="text-blue-600 hover:text-blue-800">
+              abhirajk.vercel.app
+            </a>
+          </p>
+        </div>
+        <span class="text-gray-500 text-xs message-time">11:42 AM</span>
+      </div>
+    </div>
+
+    <!-- Sender Message -->
+    <div class="flex items-start justify-end space-x-2">
+      <div class="flex flex-col items-end">
+        <div class="bg-blue-600 text-white rounded-lg rounded-tr-none p-3 shadow-md max-w-md">
+          <p>Amazing work! I'm impressed with your projects and technical skills.</p>
+        </div>
+        <span class="text-gray-500 text-xs message-time">11:43 AM</span>
+      </div>
+      <img src="https://res.cloudinary.com/djv4xa6wu/image/upload/v1735722163/AbhirajK/Abhirajk%20mykare.webp"
+           alt="User"
+           class="w-8 h-8 rounded-full object-cover">
+    </div>
+
+    <!-- Receiver Message -->
+    <div class="flex items-start space-x-2">
+      <img src="https://res.cloudinary.com/djv4xa6wu/image/upload/v1735722165/AbhirajK/Abhirajk.webp"
+           alt="Abhiraj"
+           class="w-8 h-8 rounded-full object-cover">
+      <div>
+        <div class="bg-white rounded-lg rounded-tl-none p-3 shadow-md max-w-md">
+          <p>Thank you! I specialize in full-stack development using modern technologies. Would you like to discuss a potential collaboration?</p>
+        </div>
+        <span class="text-gray-500 text-xs message-time">11:44 AM</span>
+      </div>
+    </div>
+
+    <!-- Typing Indicator -->
+    <div class="flex items-start space-x-2">
+      <img src="https://res.cloudinary.com/djv4xa6wu/image/upload/v1735722165/AbhirajK/Abhirajk.webp"
+           alt="Abhiraj"
+           class="w-8 h-8 rounded-full object-cover">
+      <div class="bg-white rounded-lg rounded-tl-none p-3 shadow-md">
+        <div class="typing-indicator">
+          <span>•</span>
+          <span>•</span>
+          <span>•</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Chat Input -->
+<div class="bg-white border-t p-4">
+  <div class="max-w-4xl mx-auto flex items-center space-x-4">
+    <button class="p-2 text-gray-500 hover:text-gray-700 transition">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+      </svg>
+    </button>
+    <button class="p-2 text-gray-500 hover:text-gray-700 transition">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/>
+      </svg>
+    </button>
+    <input type="text"
+           placeholder="Type your message..."
+           class="flex-1 p-2 border rounded-full focus:outline-none focus:border-blue-500">
+    <button class="p-2 text-white bg-blue-600 rounded-full hover:bg-blue-700 transition">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+      </svg>
+    </button>
+  </div>
+</div>
 <router-outlet />
